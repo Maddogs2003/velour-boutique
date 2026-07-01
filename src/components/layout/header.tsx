@@ -8,8 +8,8 @@ import { CartDrawer } from "@/components/cart/cart-drawer";
 
 const NAV_LINKS = [
   { href: "/collections/nouveautes", label: "Nouveautés" },
-  { href: "/collections/femme", label: "Femme" },
-  { href: "/collections/homme", label: "Homme" },
+  { href: "/collections/femmes", label: "Femme" },
+  { href: "/collections/hommes", label: "Homme" },
   { href: "/collections/accessoires", label: "Accessoires" },
   { href: "/collections/soldes", label: "Soldes" },
 ];
