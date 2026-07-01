@@ -20,18 +20,22 @@ export default async function CollectionPage({ params }: Props) {
   let collection = await getCollection(params.handle, 24).catch(() => null);
 
   if (!collection) {
-    // Collection inexistante dans Shopify : affiche tous les produits réels
-    let allProducts = await getProducts(48).catch(() => []);
-    if (allProducts.length === 0) allProducts = mockProducts;
-
     const mock = mockCollections.find((c) => c.handle === params.handle);
+    const title = mock?.title ?? params.handle.charAt(0).toUpperCase() + params.handle.slice(1);
+
+    // "Nouveautés" n'existe pas toujours en tant que collection Shopify → fallback tous produits
+    const isNouveautes = params.handle === "nouveautes";
+    const products = isNouveautes
+      ? await getProducts(48).catch(() => [])
+      : [];
+
     collection = {
       id: "fallback",
       handle: params.handle,
-      title: mock?.title ?? params.handle.charAt(0).toUpperCase() + params.handle.slice(1),
+      title,
       description: mock?.description ?? "",
       image: mock?.image ?? null,
-      products: { nodes: allProducts },
+      products: { nodes: products },
     };
   }
 
