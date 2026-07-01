@@ -194,7 +194,7 @@ export default function ProductPage({ params }: { params: { handle: string } }) 
           ))}
 
           {/* Stock */}
-          {selectedVariant && selectedVariant.quantityAvailable <= 5 && inStock && (
+          {selectedVariant && selectedVariant.quantityAvailable != null && selectedVariant.quantityAvailable <= 5 && inStock && (
             <p className="text-xs text-brand-600 mb-4">
               Plus que {selectedVariant.quantityAvailable} en stock
             </p>
