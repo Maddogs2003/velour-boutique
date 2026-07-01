@@ -1,0 +1,17 @@
+name = "Vélour"
+client_id = "ec9c9b75c526b72499e70dc4ad4fd6a2"
+application_url = "https://example.com"
+embedded = true
+
+[access_scopes]
+scopes = "read_products,write_products,read_inventory,write_inventory,read_orders"
+use_legacy_install_flow = false
+
+[auth]
+redirect_urls = ["https://example.com/auth/callback"]
+
+[webhooks]
+api_version = "2026-04"
+
+[pos]
+embedded = false
