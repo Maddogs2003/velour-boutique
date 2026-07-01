@@ -40,18 +40,22 @@ export function Footer() {
               Collections
             </h4>
             <ul className="space-y-3 text-sm">
-              {["Nouveautés", "Femme", "Homme", "Accessoires", "Soldes"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href={`/collections/${item.toLowerCase()}`}
-                      className="text-stone-400 hover:text-white transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              {[
+                { label: "Nouveautés", href: "/collections/nouveautes" },
+                { label: "Femme",      href: "/collections/femmes" },
+                { label: "Homme",      href: "/collections/hommes" },
+                { label: "Accessoires",href: "/collections/accessoires" },
+                { label: "Soldes",     href: "/collections/soldes" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-stone-400 hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
