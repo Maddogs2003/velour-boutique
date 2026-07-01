@@ -35,7 +35,7 @@ export function Header() {
         }`}
       >
         {/* Top banner */}
-        <div className="bg-brand-800 text-brand-100 text-center py-2 text-xs tracking-widest uppercase">
+        <div className="bg-stone-900 text-white text-center py-2 text-xs tracking-widest uppercase">
           Livraison offerte dès 80€ d&apos;achat — Code : VELOUR10 pour -10%
         </div>
 
