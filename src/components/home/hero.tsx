@@ -20,7 +20,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
         <div className="max-w-xl">
-          <p className="text-brand-300 text-xs font-semibold tracking-[0.3em] uppercase mb-4">
+          <p className="text-stone-900 text-xs font-semibold tracking-[0.3em] uppercase mb-4">
             Nouvelle Collection
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] mb-6">
